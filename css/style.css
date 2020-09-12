@@ -302,35 +302,21 @@ body {
   -ms-grid-column-span: 2;
   grid-area: mainbg;
   position: relative;
-  padding-bottom: 58%;
 }
 
 .olivia__mainbg img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .olivia__bglogo {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 5;
-  width: 116px;
-  height: 113px;
-}
-
-@media (max-width: 767px) {
-  .olivia__bglogo {
-    top: 35%;
-  }
 }
 
 .olivia__label {
