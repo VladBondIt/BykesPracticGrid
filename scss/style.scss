@@ -151,7 +151,6 @@ body {
 .olivia {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat2(2, 300px);
     grid-template-areas:
         "mainbg mainbg label"
         "mainbg mainbg subbg";
@@ -246,32 +245,94 @@ body {
     }
 }
 .bariosa {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "label mainbg mainbg "
+        "subbg mainbg mainbg ";
+    @media (max-width: 767px) {
+        grid-template-areas:
+            "mainbg mainbg mainbg"
+            "label label label"
+            "subbg subbg subbg";
+    }
     &__label {
+        grid-area: label;
     }
 
     &__subbg {
+        grid-area: subbg;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__mainbg {
+        grid-area: mainbg;
+        position: relative;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__bglogo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
     }
 }
 .hulot {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "mainbg label scbg"
+        "mainbg subbg scbg";
+    @media (max-width: 767px) {
+        grid-template-areas:
+            "mainbg mainbg mainbg"
+            "label label label"
+            "subbg subbg subbg"
+            "scbg scbg scbg";
+    }
     &__mainbg {
+        grid-area: mainbg;
+        position: relative;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__bglogo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
     }
 
     &__label {
+        grid-area: label;
     }
 
     &__subbg {
+        grid-area: subbg;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__scbg {
+        grid-area: scbg;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 .slider {
