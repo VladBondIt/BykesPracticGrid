@@ -109,6 +109,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
         z-index: -1;
     }
@@ -149,6 +150,10 @@ body {
     }
 }
 .olivia {
+    & img {
+        width: 100%;
+        height: 100%;
+    }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
@@ -163,10 +168,6 @@ body {
     &__mainbg {
         grid-area: mainbg;
         position: relative;
-        & img {
-            width: 100%;
-            height: 100%;
-        }
     }
 
     &__bglogo {
@@ -179,14 +180,14 @@ body {
 
     &__label {
         grid-area: label;
+        & img {
+            width: 41px;
+            height: 30px;
+        }
     }
 
     &__subbg {
         grid-area: subbg;
-        & img {
-            width: 100%;
-            height: 100%;
-        }
     }
 }
 .label {
@@ -245,6 +246,10 @@ body {
     }
 }
 .bariosa {
+    & img {
+        width: 100%;
+        height: 100%;
+    }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
@@ -258,23 +263,20 @@ body {
     }
     &__label {
         grid-area: label;
+
+        & img {
+            width: 32px;
+            height: 32px;
+        }
     }
 
     &__subbg {
         grid-area: subbg;
-        & img {
-            width: 100%;
-            height: 100%;
-        }
     }
 
     &__mainbg {
         grid-area: mainbg;
         position: relative;
-        & img {
-            width: 100%;
-            height: 100%;
-        }
     }
 
     &__bglogo {
@@ -286,6 +288,10 @@ body {
     }
 }
 .hulot {
+    & img {
+        width: 100%;
+        height: 100%;
+    }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
@@ -301,10 +307,6 @@ body {
     &__mainbg {
         grid-area: mainbg;
         position: relative;
-        & img {
-            width: 100%;
-            height: 100%;
-        }
     }
 
     &__bglogo {
@@ -317,75 +319,177 @@ body {
 
     &__label {
         grid-area: label;
+
+        & img {
+            width: 23px;
+            height: 41px;
+        }
     }
 
     &__subbg {
         grid-area: subbg;
-        & img {
-            width: 100%;
-            height: 100%;
-        }
     }
 
     &__scbg {
         grid-area: scbg;
-        & img {
-            width: 100%;
-            height: 100%;
-        }
     }
 }
 .slider {
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 6% 0;
     &__item {
     }
 
     &__icon-link {
+        margin-bottom: 2%;
     }
 
     &__title {
+        margin-bottom: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & span {
+            margin-left: 1%;
+            font-weight: 300;
+            color: #848789;
+        }
     }
 
     &__left {
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: #353738;
     }
 
     &__right {
     }
 
     &__text {
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 400;
+        font-style: italic;
+        color: #848789;
     }
 }
 .shop {
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "item1 item2 item4 item5 item6 item6"
+        "item3 item3 item4 item5 item7 item8";
+    @media (max-width: 1023px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "item1 item2 item4"
+            "item3 item3 item4"
+            "item5 item6 item6"
+            "item5 item7 item8";
+    }
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "item1 item2"
+            "item5 item4"
+            "item5 item4"
+            "item3 item3"
+            "item6 item6"
+            "item7 item8";
+    }
+
     &__item-1 {
+        grid-area: item1;
     }
 
     &__item-2 {
+        grid-area: item2;
     }
 
     &__item-3 {
+        grid-area: item3;
     }
 
     &__item-4 {
+        grid-area: item4;
     }
 
     &__item-5 {
+        grid-area: item5;
     }
 
     &__item-6 {
+        grid-area: item6;
+        position: relative;
     }
 
     &__link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        & span {
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #ffffff;
+            display: block;
+            padding-top: 1%;
+        }
+        & a {
+            & img {
+                width: 51px;
+                height: 30px;
+            }
+        }
+        &:hover + .shop__item-6 {
+            background-color: rgba(100, 194, 158, 0.8) !important;
+        }
     }
 
     &__item-7 {
+        grid-area: item7;
     }
 
     &__item-8 {
+        grid-area: item8;
     }
 
     &__footer {
+        background-color: #282f35;
+        padding: 3% 0;
     }
 
     &__btn {
+        display: block;
+        font-size: 14px;
+        line-height: 45px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+        width: 300px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.49);
+        text-align: center;
+        transition: all 0.5s;
+        margin: 0 auto;
+        &:hover {
+            box-shadow: inset 0 0 20px rgb(255, 255, 255);
+        }
+        &:active {
+            transform: translateY(2px);
+        }
     }
 }
 .contact {
