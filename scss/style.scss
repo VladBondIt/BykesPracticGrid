@@ -522,29 +522,110 @@ body {
     }
 }
 .contact {
+    text-align: center;
+    margin-bottom: 7%;
     &__logo {
+        padding-top: 7%;
+        margin-bottom: 4%;
     }
 
     &__text {
+        margin-bottom: 2%;
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 400;
+        font-style: italic;
+        color: #848789;
+    }
+
+    &__form {
+    }
+
+    &__input {
+        font-family: Lato;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+        font-style: italic;
+        color: #929292;
+        width: 400px;
+        height: 69px;
+        background-color: #ffffff;
+        border: 1px solid #d3d7d9;
+        padding-left: 2%;
+    }
+
+    &__btn {
+        font-family: Lato;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #ffffff;
+        width: 126px;
+        height: 69px;
+        background-color: #64c29e;
+        transition: all 0.2s;
+        &:active {
+            transform: translate(0, 2px);
+        }
     }
 }
+
 .footer {
+    background-color: #f7f7f7;
     &__row {
+        max-width: 1101px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5% 0;
+        flex-wrap: wrap;
     }
 
     &__column {
     }
 
     &__info {
+        font-size: 13.9px;
+        font-weight: 400;
+        font-style: italic;
+        & li:first-child {
+            font-family: Lato;
+            font-size: 16px;
+            line-height: 17px;
+            font-weight: 700;
+            color: #848789;
+        }
+        & li {
+            margin-bottom: 2%;
+        }
+        & li:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &__icons {
+        display: flex;
+        align-items: center;
+        margin-left: -60%;
+        & li {
+            margin-right: 15%;
+        }
     }
 
     &__link {
     }
 
     &__label {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        & span {
+            white-space: nowrap;
+            margin-right: 10px;
+        }
     }
 
     &__logo {
