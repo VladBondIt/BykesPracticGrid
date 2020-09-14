@@ -4,6 +4,11 @@
 
 body {
     font-family: Lato;
+    &.lock {
+        @media (max-width: 767px) {
+            overflow: hidden;
+        }
+    }
 }
 
 .wrapper {
@@ -26,6 +31,55 @@ body {
 
     &__burger {
         display: none;
+        @media (max-width: 767px) {
+            display: block;
+            position: fixed;
+            width: 30px;
+            height: 20px;
+            left: 20px;
+            top: 15px;
+            z-index: 6;
+        }
+        &::before {
+            content: "";
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.609);
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: all 0.3s ease 0s;
+        }
+        &::after {
+            content: "";
+            bottom: 0;
+            background-color: rgba(10, 10, 10, 0.609);
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: all 0.3s ease 0s;
+        }
+        & span {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.596);
+            left: 0;
+            width: 100%;
+            height: 2px;
+            top: 9px;
+            transition: all 0.3s ease 0s;
+        }
+        &.active::before {
+            transform: rotate(45deg);
+            top: 9px;
+        }
+        &.active:after {
+            transform: rotate(-45deg);
+            bottom: 9px;
+        }
+        &.active span {
+            transform: scale(0);
+        }
     }
 
     &__left-submenu {
@@ -33,6 +87,18 @@ body {
         & li {
             margin-right: 63px;
             position: relative;
+            @media (max-width: 767px) {
+                margin-top: 20px;
+                margin-left: 6%;
+            }
+            @media (max-width: 321px) {
+                margin-left: 80px;
+            }
+            &:first-child {
+                @media (max-width: 767px) {
+                    margin-top: 120px;
+                }
+            }
         }
         & li::after {
             content: "";
@@ -43,6 +109,9 @@ body {
             right: -32px;
             border-radius: 50%;
             background-color: #4d4959;
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
         & li:last-child::after {
             display: none;
@@ -54,9 +123,29 @@ body {
             text-transform: uppercase;
             letter-spacing: 0.2em;
             color: #4d4959;
+            white-space: nowrap;
+            @media (max-width: 767px) {
+                font-size: 40px;
+            }
         }
         @media (max-width: 767px) {
             display: none;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(32, 218, 177);
+            padding-top: 70px;
+            transition: all 0.3s;
+            overflow: auto;
+            z-index: 5;
+            &.active {
+                display: flex;
+                flex-direction: column;
+                top: 0;
+                align-items: center;
+            }
         }
     }
 
@@ -76,6 +165,14 @@ body {
         & li {
             margin-left: 63px;
             position: relative;
+            @media (max-width: 767px) {
+                margin-right: 10%;
+            }
+            &:first-child {
+                @media (max-width: 767px) {
+                    margin-bottom: 10px;
+                }
+            }
         }
 
         & li::before {
@@ -87,6 +184,9 @@ body {
             left: -32px;
             border-radius: 50%;
             background-color: #4d4959;
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
         & li:first-child::before {
             display: none;
@@ -98,9 +198,27 @@ body {
             text-transform: uppercase;
             letter-spacing: 0.2em;
             color: #4d4959;
+            @media (max-width: 767px) {
+                font-size: 40px;
+            }
         }
         @media (max-width: 767px) {
             display: none;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-top: 70px;
+            transition: all 0.3s;
+            overflow: auto;
+            z-index: 5;
+            &.active {
+                display: flex;
+                flex-direction: column;
+                top: 0;
+                align-items: center;
+            }
         }
     }
     &__bg {
@@ -539,34 +657,42 @@ body {
     }
 
     &__form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     &__input {
-        font-family: Lato;
+        flex: 0 1 400px;
         font-size: 20px;
         line-height: 24px;
         font-weight: 400;
         font-style: italic;
         color: #929292;
-        width: 400px;
+        max-width: 400px;
         height: 69px;
         background-color: #ffffff;
         border: 1px solid #d3d7d9;
         padding-left: 2%;
+        margin: 6px 3px;
     }
 
     &__btn {
-        font-family: Lato;
+        flex: 0 1 126px;
         font-size: 24px;
         line-height: 24px;
         font-weight: 300;
         color: #ffffff;
-        width: 126px;
         height: 69px;
         background-color: #64c29e;
         transition: all 0.2s;
         &:active {
             transform: translate(0, 2px);
+        }
+        @media (max-width: 531px) {
+            flex: 0 1 400px;
+            margin: 0 3px;
         }
     }
 }
@@ -581,9 +707,16 @@ body {
         justify-content: space-between;
         padding: 5% 0;
         flex-wrap: wrap;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &__column {
+        @media (max-width: 767px) {
+            margin-bottom: 8%;
+        }
     }
 
     &__info {
@@ -609,6 +742,9 @@ body {
         display: flex;
         align-items: center;
         margin-left: -60%;
+        @media (max-width: 767px) {
+            margin-left: -20%;
+        }
         & li {
             margin-right: 15%;
         }
