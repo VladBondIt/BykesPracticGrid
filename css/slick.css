@@ -37,21 +37,38 @@
 }
 /* Стрелка влево */
 .slick-arrow.slick-prev {
+    display: none;
+    font-size: 0;
 }
 /* Стрелка вправо */
 .slick-arrow.slick-next {
+    display: none;
+    font-size: 0;
 }
 /* Стрелка не активная */
 .slick-arrow.slick-disabled {
 }
 /* Точки (булиты) */
 .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .slick-dots li {
+    margin: 0 8px;
 }
 /* Активная точка */
-.slick-dots li.slick-active {
+.slick-dots li.slick-active button {
+    width: 11px;
+    height: 11px;
+    background-color: #a9afb3;
+    border-radius: 50%;
 }
 /* Элемент точки */
 .slick-dots li button {
+    font-size: 0;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #c8c8c8;
+    border-radius: 50%;
 }

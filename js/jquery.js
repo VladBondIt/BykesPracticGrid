@@ -5,5 +5,10 @@ $(document).ready(function () {
     });
 });
 
-// .header__left-submenu,.header__right-submenu
-// .header__menu
+$(document).ready(function () {
+    $('.slider').slick({
+        speed: 800,
+        touchThreshold: 20,
+        dots: true,
+    });
+});
