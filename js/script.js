@@ -1,41 +1,23 @@
-const oliBg = document.querySelector('#Obg');
-const oliTrigger = document.querySelector('#Otrigger');
-const barBg = document.querySelector('#Bbg');
-const barTrigger = document.querySelector('#Btrigger');
-const hulBg = document.querySelector('#Hbg');
-const hulTrigger = document.querySelector('#Htrigger');
-const shopBg = document.querySelector('.shop__link');
-const shopTrigger = document.querySelector('.shop__link-h');
+const bgTriggs = document.querySelectorAll('.bg-trigg');
+const bgs = document.querySelectorAll('.bg');
 
-oliTrigger.onmouseenter = () => {
-    oliBg.style.backgroundColor = 'rgba(100,194,158,0.8)';
+for (let i = 0; i < bgTriggs.length; i++) {
+    bgTriggs[i].addEventListener('mousemove', (e) => {
+        for (let i2 = 0; i2 < bgs.length; i2++) {
+            bgs[i2];
+            if (i === i2) {
+                bgs[i2].style.backgroundColor = 'rgba(100,194,158,0.6)';
+            }
+        };
+    });
+    bgTriggs[i].addEventListener('mouseout', (e) => {
+        for (let i2 = 0; i2 < bgs.length; i2++) {
+            bgs[i2];
+            if (i === i2) {
+                bgs[i2].style.backgroundColor = 'transparent';
+            }
+        };
+    });
+};
 
-}
-oliTrigger.onmouseleave = () => {
-    oliBg.style.backgroundColor = 'transparent';
 
-}
-barTrigger.onmouseenter = () => {
-    barBg.style.backgroundColor = 'rgba(100,194,158,0.8)';
-
-}
-barTrigger.onmouseleave = () => {
-    barBg.style.backgroundColor = 'transparent';
-
-}
-hulTrigger.onmouseenter = () => {
-    hulBg.style.backgroundColor = 'rgba(100,194,158,0.8)';
-
-}
-hulTrigger.onmouseleave = () => {
-    hulBg.style.backgroundColor = 'transparent';
-
-}
-shopTrigger.onmouseenter = () => {
-    shopBg.style.backgroundColor = 'rgba(100,194,158,0.8)';
-
-}
-shopTrigger.onmouseleave = () => {
-    shopBg.style.backgroundColor = 'transparent';
-
-}

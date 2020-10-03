@@ -235,6 +235,9 @@ body {
     &__mainbg {
         grid-area: mainbg;
         position: relative;
+        & img {
+            // display: none;
+        }
     }
 
     &__bglogo {
@@ -251,6 +254,7 @@ body {
         & img {
             width: 80%;
             height: 80%;
+            // display: block;
         }
     }
 
@@ -717,4 +721,7 @@ body {
 
     &__logo {
     }
+}
+.bg {
+    transition: all 0.4s;
 }
