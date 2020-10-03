@@ -7,7 +7,7 @@ for (let i = 0; i < bgTriggs.length; i++) {
             bgs[i2];
             if (i === i2) {
                 bgs[i2].style.backgroundColor = 'rgba(100,194,158,0.6)';
-            }
+            };
         };
     });
     bgTriggs[i].addEventListener('mouseout', (e) => {
@@ -15,7 +15,7 @@ for (let i = 0; i < bgTriggs.length; i++) {
             bgs[i2];
             if (i === i2) {
                 bgs[i2].style.backgroundColor = 'transparent';
-            }
+            };
         };
     });
 };
