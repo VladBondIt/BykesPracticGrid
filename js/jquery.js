@@ -11,7 +11,7 @@ $(document).ready(function () {
         touchThreshold: 20,
         dots: true,
         slidesToShow: 1,
-        fade: true
+        fade: true,
     });
     $('.place__slider').slick('setPosition');
 });
