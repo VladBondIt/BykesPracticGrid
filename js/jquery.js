@@ -6,9 +6,12 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $('.slider').slick({
+    $('.place__slider').slick({
         speed: 800,
         touchThreshold: 20,
         dots: true,
+        slidesToShow: 1,
+        fade: true
     });
+    $('.place__slider').slick('setPosition');
 });

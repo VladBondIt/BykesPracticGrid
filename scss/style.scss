@@ -18,9 +18,9 @@ body {
 .header {
     width: 100%;
     position: relative;
-    padding-bottom: 38%;
+    padding-bottom: 46.2%;
     @media (max-width: 767px) {
-        padding-bottom: 65%;
+        padding-bottom: 90%;
     }
     &__menu {
         display: flex;
@@ -432,10 +432,10 @@ body {
         grid-area: scbg;
     }
 }
-.slider {
+.place {
     background-color: #f7f7f7;
     text-align: center;
-    padding: 6% 0;
+    padding: 4% 0;
     &__item {
     }
 
